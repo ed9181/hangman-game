@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root {
+    --font-family: 'Montserrat', sans-serif;
+    --bg-color: linear-gradient(to bottom, #ffdeb9, #fecb9b, #feb681, #fea069, #fe8856, #fd7a51, #fc6b4d, #fb5a4b, #f85450, #f44f55, #f04a5a, #eb455f);
+    --container-color: #FFDEB9;
+    --btn-bg-color: #EB455F;
+    --btn-text-color: aliceblue;
+    --btn-hover: #B46060;
+    --btn-bg-disabled: #EEEEEE;
+    --btn-text-disabled: black;
+    --btn-hover-letter: rgb(156, 211, 156);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+body {
+    height: 100vh;
+    background-image: var(--bg-color);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    font-size: 1.5rem;
+    background-color: var(--container-color);
+    width: 45vw;
+    height: 580px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position: relative;
+    padding: 18px;
+    border-radius: 35px;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.9);
+}
+
+#options-container {
+    text-align: center;
+}
+
+#options-container div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 22px 0 22px 0;
+}
+
+#options-container button {
+    padding: 10px;
+    background-color: var(--btn-bg-color);
+    border: none;
+    color: var(--btn-text-color);
+    border-radius: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#options-container button:hover {
+    background-color: var(--btn-hover);
+}
+
+#options-container button:disabled {
+    border: none;
+    color: var(--btn-text-disabled);
+    background-color: var(--btn-bg-disabled);
+    cursor: not-allowed;
+}
+
+.letter-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 2px;
+}
+
+#letter-container button:hover {
+    background-color: var(--btn-hover-letter);
+    transition: 0.3s;
+}
+
+#letter-container button {
+    height: 40px;
+    width: 40px;
+    border-radius: 12px;
+    background-color: aliceblue;
+    cursor: pointer;
+}
+
+.new-game-popup {
+    background-color: aliceblue;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#user-input-section {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    font-size: 2.5rem;
+    margin: 18px 0;
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 35px;
+    padding: 15px;
+}
+
+.hide {
+    display: none;
+}
+
+#result-text h2 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+#result-text p {
+    font-size: 1.5rem;
+    margin: 34px 0;
+}
+
+#result-text span {
+    font-weight: 800;
+}
+
+#new-game-button {
+    font-size: 1.25em;
+    padding: 0.5em 1em;
+    background-color: var(--btn-bg-color);
+    border: 3px solid #000000;
+    color: var(--btn-text-color);
+    border-radius: 32px;
+    cursor: pointer;
+}
+
+.win-msg {
+    color: green;
+}
+
+.lose-msg {
+    color: red;
+}
